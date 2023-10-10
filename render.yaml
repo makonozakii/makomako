@@ -1,0 +1,22 @@
+databases:
+  - name: titan_DB
+    databaseName: titan_db
+    user: titan
+    region: singapore
+
+services:
+  - type: web
+    name: titan
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: titan_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
