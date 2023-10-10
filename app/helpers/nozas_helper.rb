@@ -1,0 +1,2 @@
+module NozasHelper
+end
