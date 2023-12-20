@@ -1,19 +1,22 @@
-<%= form_for @human do |f| %>
+<div class="edit">
+  <h1>投稿編集ページ</h1><br><br>
+  <%= form_for @human do |f| %>
 
-  <div class="field">
+    <div class="field">
       <%= f.label :名前 %>
       <%= f.text_field :name, :size => 30 %>
     </div>
   
     <div class="field">
-    <%= f.label :アイコン %>
-    <%= f.file_field :image, :size => 30 %>
-  </div>
+      <%= f.label :アイコン %>
+      <%= f.file_field :image, :size => 30 %>
+    </div>
   
-  <div class="field">
-  <%= f.label :内容  %>
-  <%= f.text_area :content, :size => "30x2" %>
-  </div>
+    <div class="field">
+      <%= f.label :内容  %>
+      <%= f.text_area :content, :size => "30x2" %>
+    </div>
   
   <%= f.submit "投稿する" %>
   <% end %>
+</div>

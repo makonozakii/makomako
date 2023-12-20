@@ -1,10 +1,115 @@
-.start {
-    border: 4px solid;
-    border-color: #031de2;
-    margin: 400px;
+.toto{
+  background-color: black;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+}
+.toto p{
+  color: white;
+}
+
+.start {    
+    list-style: none;
+    font-size: 40px;
+    margin: 150px;
     padding: 50px;
     text-align: center;
 }
+
+.hey{
+  color: white;
+  text-decoration: none;
+}
+
+.hey:hover{
+  color: #888686;
+}
+
+.cow h1{
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #007700,
+        0 0 82px #007700,
+        0 0 92px #007700,
+        0 0 102px #007700,
+        0 0 151px #007700;
+  }
+  
+.cow h1 {
+       animation: pulsate 1.5s infinite alternate;     
+  }
+  
+  @keyframes pulsate {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #007700,
+        0 0 80px #007700,
+        0 0 90px #007700,
+        0 0 100px #007700,
+        0 0 150px #007700;
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #007700,
+      0 0 45px #007700,
+      0 0 55px #007700,
+      0 0 70px #007700,
+      0 0 80px #007700;
+      }
+  }
+.story h1{
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #007700,
+        0 0 82px #007700,
+        0 0 92px #007700,
+        0 0 102px #007700,
+        0 0 151px #007700;
+  }
+  
+.story h1 {
+       animation: pulsate 1.5s infinite alternate;     
+  }
+  
+  @keyframes pulsate {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #007700,
+        0 0 80px #007700,
+        0 0 90px #007700,
+        0 0 100px #007700,
+        0 0 150px #007700;
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #007700,
+      0 0 45px #007700,
+      0 0 55px #007700,
+      0 0 70px #007700,
+      0 0 80px #007700;
+      }
+  }
+
+
 h6 {
     margin: 400px,200px;
     text-align: center;
@@ -14,27 +119,98 @@ h6 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+}
+
+.story p{
+  color: white;
+  font-size: 18px;
 }
 
 .first {
     margin: 100px,100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: baseline;
+    position: relative;
 }
+
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.container::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 50px 80px #888686;
+}
+.container img {
+  width: 200%;
+  border-radius: 50%;
+}
+
 
 .second {
     text-align: center;
 }
+.second p:hover{
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 5vw;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, 
+                     #440000, 
+                     #FF0000,
+                      #770000,
+                      #FF0000);
+    animation: .8s shake infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }
+  
+  
 
 .second p{
-    color: red;
+    font-size: 25px;
 }
 
 .third {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 .fourth {
@@ -44,21 +220,69 @@ h6 {
 .comment {
     text-align: center;
     margin: 30px auto;
-    
+    color: white;
 }
+.comment h1{
+  margin: 15px;
+}
+
+
+.comment a{
+  color: white;
+  text-decoration: none;
+}
+
+.comment a:hover{
+  color: #888686;
+}
+
 .humans-container {
+  color: white;
   width: 50%;
   margin: 10px auto;
+  padding-bottom: 60px;
 }
 
 .human {
-  border-top: solid blue;
+  border-top: solid 	#000066;
   margin-top: 10px;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .human-right {
     display: flex;
     justify-content: flex-end;
 }
+
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:7;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color:#070A31;/*背景色*/
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 10;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+.bo1 {
+  text-align: center;
+  margin: 5px;
+  display: inline-block;
+width: 100px;
+padding: 5px 5px;
+text-decoration: none;
+border: 1px;
+color: #fff;
+box-shadow: 0px 2px 4px #575;
+}
+

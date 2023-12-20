@@ -1,21 +1,22 @@
-<h1>ストーリー説明</h1>
-<h3>新規投稿ページ</h3>
-<%= form_for @human do |f| %>
+<div class="new">
+  <h1>新規投稿ページ</h1>
+  <%= form_for @human do |f| %>
 
-<div class="field">
-    <%= f.label :名前 %>
-    <%= f.text_field :name, :size => 30 %>
+  <div class="field">
+      <%= f.label :名前 %>
+      <%= f.text_field :name, :size => 30 %>
+    </div>
+
+  <div class="field">
+    <%= f.label :アイコン %>
+    <%= f.file_field :image, :size => 30 %>
   </div>
 
-<div class="field">
-  <%= f.label :アイコン %>
-  <%= f.file_field :image, :size => 30 %>
-</div>
+  <div class="field">
+    <%= f.label :内容  %>
+    <%= f.text_area :content, :size => "30x2" %>
+  </div>
 
-<div class="field">
-  <%= f.label :内容  %>
-  <%= f.text_area :content, :size => "30x2" %>
+  <%= f.submit "投稿する" %>
+  <% end %>
 </div>
-
-<%= f.submit "投稿する" %>
-<% end %>

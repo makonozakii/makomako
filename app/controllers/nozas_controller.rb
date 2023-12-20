@@ -17,13 +17,12 @@ class NozasController < ApplicationController
       end
 
       def show
-        @noza = Noza.find(params[:id])
-        @comments = @noza.comments
+        @humen=Noza.find(params[:id])
+        @comments = @humen.comments
         @comment = Comment.new
       end
 
       def edit
-
         @human = Noza.find(params[:id])
       end
 
@@ -44,7 +43,7 @@ class NozasController < ApplicationController
     
       private
       def human_params
-        params.require(:noza).permit(:name, :image, :content)
+        params.require(:noza).permit(:id, :name, :image, :content)
       end
 end
 

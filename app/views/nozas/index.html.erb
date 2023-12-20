@@ -1,12 +1,23 @@
+<head>
+<link rel="stylesheet" href="index.scss">
+</head>
+
+
+<body>
+<div id="particles-js"></div>
+<div id="wrapper">
+
 <div class="story">
+  <h1>ストーリー説明</h1>
 
-<h1>ストーリー説明</h1>
+    <br><br><br><br>
 
-<br><br><br><br>
+  <div class="first">
+  <div class="container">
+    <%= image_tag 'cloudsky.jpg', size: "600x400" %>
+    </div>
 
-<div class="first">
-  <%= image_tag 'cloudsky.jpg', size: "500x300"  %>
-  <div class="cloud-text">
+    <div class="cloud-text">
     <p>人間を食らう巨人から逃れ</p>
     <p>三重に囲まれた壁の中で</p>
     <p>人類は100年にわたる平和を謳歌していた。</p>
@@ -15,21 +26,21 @@
     <p>「超大型巨人」と「鎧の巨人」によりその平和は終焉を迎える。</p>
     <p>肉親を巨人に食べられ親しい者たちとも離れ離れになるエレン・ミカサ・アルミンの3人。</p>
     <p>巨人に蹂躙された故郷を前に幼いエレンは誓う。</p>
+     </div>
   </div>
-</div>
 
-<br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br>
 
-<div class="second">
-  <p>駆逐してやる！！</p>
-  <p>この世から…</p>
-  <p>1匹残らず！！</p>
-</div>
+  <div class="second">
+  <p>駆逐してやる！！<br>
+  この世から…<br>
+  1匹残らず！！</p>
+  </div>
 
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
-<div  class="third">
-  <div class="sea-text">
+  <div  class="third">
+    <div class="sea-text">
     <p>104期訓練兵としてエレンはミカサ、アルミン、その他の仲間とともに</p>
     <p>日々訓練に励んだ。</p>
     <p>入団式の前日</p>
@@ -38,37 +49,42 @@
     <p>エレンたちは訓練兵として戦いに参加した。</p>
     <p>多くの仲間が死にゆく中、</p>
     <p>エレンに巨人化の力があることが発覚。</p>
-    <p>人類の敵であった巨人と、自分。</p>
+    <p>自分は巨人であった。</p>
+    <p>巨人は人類の敵であるはずだ。</p>
     <p>エレンは葛藤し、当然のごとく周囲からも疑いの目を向けられる。</p>
     <p>このとき、シガンシナ区襲撃時から</p>
     <p>5年の歳月がたっていた。</p>
+    </div>
+    <div class="container">
+      <%= image_tag 'sea.jpg', size: "600x400"  %>
+    </div>
   </div>
-  <%= image_tag 'sea.jpg', size: "500x300"  %>
-</div>
 
-<br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
-<div class="fourth">
+  <div class="fourth">
   <p>なぜ巨人は人々を殺戮するのか。</p>
   <p>そもそも、巨人とは何なのか。</p>
-
+    <br><br>
   <p>本当の敵は何なのか。</p>
-
+    <br>
   <p>その先に待っているのは希望か、絶望か。</p>
-
+    <br><br>
   <p>エレンが父から譲り受けた鍵を使って家の地下室に行けば</p>
   <p>謎はすべて解けるという。</p>
   <p>エレンは巨人を駆逐するという決意を胸に</p>
   <p>この世界の謎を解いていき、「自由」を目指す物語。</p>
-</div>
+  </div>
 
+  <br><br><br><br><br><br><br><br><br><br>
 </div>
 
 <div class="comment">
-  <h3>一覧ページ</h3>
+  <h1>一覧ページ</h1>
     <p>ここでは誰でも自由に書き込みができます。</p>
     <p>進撃の巨人の好きなシーン、キャラクター、あるあるネタなど共有しよう。</p>
     <p>注意！ネタバレを避けたい人は作品を見てから。</p>
+    <br>
     <%= link_to "新規投稿へ", new_noza_path %>
 </div>
 
@@ -77,18 +93,110 @@
   <% @humans.each do |t| %>
     <div class="human">
       <div class="human-left">
-        <%= t.name %>
-        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+        <%= image_tag t.image_url, size: "150x150" if t.image? %>
       </div>
       <div class="human-main">
+        <%= t.name %>
+        <br><br>
         <%= t.content %>
         <%= t.created_at %>
+        <br>
+        <div class="human-right">
+          <%= link_to "編集する", edit_noza_path(t.id), class: "bo1" %>
+          <%= link_to "詳細へ", noza_path(t.id), class: "bo1" %>
+        </div>
       </div>
-    </div>
-    <div class="human-rihgt">
-        <%= link_to "編集する", edit_noza_path(t.id) %>
-        <%= button_to "削除する", noza_path(t.id), method: :delete %> 
-        <%= link_to "詳細へ", noza_path(t.id) %>
     </div>
   <% end %>
 </div>
+</div>
+
+<!--自作のJS-->
+<script src="js/5-5.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-5/js/5-5.js"></script>
+
+</body>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,//この数値を変更すると雪の数が増減できる
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "image",//形状は画像を指定
+      "stroke": {
+        "width": 3,
+        "color": "#fff"
+      },
+      "image": {
+        "src": "img/snow.png",//【重要】画像を指定！雪の画像を設定してください。
+        "width": 120,
+        "height": 120
+      }
+    },
+    "opacity": {
+      "value": 0.7,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 20,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,//この数値を小さくするとゆっくりな動きになる
+      "direction": "bottom",//下に向かって落ちる
+      "random": true,//動きはランダム
+      "straight": false,//動きをとどめない
+      "out_mode": "out",//画面の外に出るように描写
+      "bounce": false,//跳ね返りなし
+      "attract": {
+        "enable": true,
+        "rotateX": 300,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+      },
+      "onclick": {
+        "enable": false,
+      },
+      "resize": true
+    }
+  },
+  "retina_detect": true
+});
+
+
+particlesJS("particles-js", {"particles":{"number":{"value":400,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":8},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.17329657345411573,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":7.996801279488208,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":191.92323070771698,"color":"#ffffff","opacity":0.4,"width":8.956417433026791},"move":{"enable":true,"speed":6,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>

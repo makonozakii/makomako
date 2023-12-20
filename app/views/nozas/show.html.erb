@@ -1,29 +1,33 @@
-<h1>ストーリー紹介</h1>
-<h3>コメント詳細</h3>
-<div class="human">
-<%= @noza.name %>
-<%= @noza.image %>
-<%= @noza.content %>
-<%= @noza.created_at %>
-<%= button_to "削除する", noza_path(@noza.id), method: :delete %> 
-  <%= link_to "編集する", edit_noza_path(@noza.id) %></div>
-  <div class="comment-wrapper">
-  <p>コメント一覧</p>
-  <% @comments.each do |c| %>
-    <div>
-      <br>
-      <%= c.content %>
+<div class="detail">
+    <h1>コメント詳細</h1><br>
+    <p>投稿に更にコメントがつけられます。</p>
+  <div class="detail-1">
+    <div class="detail-1-1">
+      
+        <%= @humen.content %>
+        <%= button_to "削除する", noza_path(@humen.id), method: :delete%> 
+      
     </div>
-      <br>
-  <% end %>
+  <br><br>
+    <h1>コメント一覧</h1><br><br>
+    <div class="comment-wrapper">
+      <% @comments.each do |c| %>
+        <br>
+      <%= c.content %>
+        <br>
+      <% end %>
+    </div>
+  </div>
 
-  <%= form_with(model: [@noza, @comment], local: true) do |f| %>
+  <div class="detail-2">
+    <h1>新規コメント</h1><br><br>
+    <%= form_with(model: [@humen, @comment], local: true) do |f| %>
       <%= f.text_area :content %>
       <%= button_tag type: "submit" do %>
         <i class="far fa-comments"></i> コメントする
       <% end %>
-    <% end %>
- 
+      <% end %>
+      <br><br>
+    <%= link_to "一覧に戻る", nozas_path %>
+  </div>
 </div>
-
-<%= link_to "一覧に戻る", nozas_path %>

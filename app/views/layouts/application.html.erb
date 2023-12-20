@@ -12,13 +12,15 @@
 
   <body>
     <header>
-      <h1 class="headline">
-        <a>進撃の巨人</a>
-      </h1>
+      <div class="headline">
+    
+      <%= link_to "進撃の巨人", root_path %>
+  
+      </div>
     <ul class="nav-list">
       <li class="nav-list-item"><%= link_to "ストーリー説明", nozas_path, class: "link" %></li>
       <li class="nav-list-item"><%= link_to "巨人紹介", dogs_lion_path, class: "link" %></li>
-      <li class="nav-list-item"><%= link_to "診断", dogs_path, class: "link" %></li>
+      <li class="nav-list-item"><%= link_to "巨人診断", dogs_path, class: "link" %></li>
     </ul>
   </header>
 

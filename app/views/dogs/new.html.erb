@@ -1,48 +1,78 @@
-<%= form_for(@dog, class: 'form-horizontal', role: 'form') do |f| %>
+<div class="momo">
+    <div class="cow">
+        <h1>巨人診断<h1>
+    </div>
+    <br><br>
+
+    <%= form_for(@dog, class: 'form-horizontal', role: 'form') do |f| %>
     <div class="container-sindan">
         <div class="row">
-            <div class="col-12">
-                <p>Question1. どちらかと言うと…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>チームのリーダーや先頭にたつ方だ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>サポート役に徹することが多い方だ</p>
-            </div>
-
-            <div class="col-12">
-                <p>Question2. 自分の性格は…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>我慢強さや継続力が強みだ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>せっかちで、思い立ったらすぐ行動する</p>
+            <div class="Q1">
+                <div class="col-12">
+                    <p>Question1. どちらかと言うと…</p>
+                    <hr class="hr1">
+                </div>
+                    <br>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "1", nil %>チームのリーダーや先頭にたつ方だ</p>
+                </div>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "2", nil %>サポート役に徹することが多い方だ</p>
+                </div>
             </div>
 
-            <div class="col-12">
-                <p>Question3. 自分の価値観に近いのは…</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>決められたルールは何があっても守るべきだ</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>時と場合によりルールを破るのは仕方がない、柔軟に行くべきだ</p>
+        <br><br>
+            
+            <div class="Q2">
+                <div class="col-12">
+                    <p>Question2. 自分の性格は…</p>
+                    <hr class="hr2">
+                </div>
+                    <br>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "1", nil %>我慢強さや継続力が強みだ</p>
+                </div>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "2", nil %>せっかちで、思い立ったらすぐ行動する</p>
+                </div>
             </div>
 
-            <div class="col-12">
-                <p>Question4. 自分が近いのは…</p>
+        <br><br>
+
+            <div class="Q3">
+                <div class="col-12">
+                    <p>Question3. 自分の価値観に近いのは…</p>
+                    <hr class="hr1">
+                </div>
+                    <br>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "1", nil %>決められたルールは何があっても守るべきだ</p>
+                </div>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "2", nil %>時と場合によりルールを破るのは仕方がない、柔軟に行くべきだ</p>
+                </div>
             </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "1", nil %>アイデアマンで、自分らしく０から１を生むことが好き</p>
-            </div>
-            <div class="col-6">
-                <p><%= f.check_box :question, {multiple: true}, "2", nil %>器用に真似することが得意、既にあるものを大きくしていくことが好き</p>
+
+        <br><br>
+
+            <div  class="Q4">
+                <div class="col-12">
+                    <p>Question4. 自分が近いのは…</p>
+                    <hr class="hr2">
+                </div>
+                    <br>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "1", nil %>アイデアマンで、自分らしく０から１を生むことが好き</p>
+                </div>
+                <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "2", nil %>器用に真似することが得意、既にあるものを大きくしていくことが好き</p>
+                </div>
             </div>
         </div>
+
+        <div class="sindanbotan">
+            <%= f.submit "post" , class:"po"%>
+            <% end %>
+        </div>
     </div>
-    <div class="sindanbotan">
-        <%= f.submit "post" %>
-    </div>
-<% end %>
+</div>

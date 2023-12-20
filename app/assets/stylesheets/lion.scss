@@ -1,0 +1,160 @@
+.kyojin{
+  font-weight: bold;
+  color: white;
+    background-image: image-url('road.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    position: relative;
+}
+
+.kyojin p{
+    font-size: 20px;
+}
+
+.kyojin h3{
+    font-size: 25px;
+}
+.kyojin h1{
+    text-align: center;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #007700,
+        0 0 82px #007700,
+        0 0 92px #007700,
+        0 0 102px #007700,
+        0 0 151px #007700;
+  }
+  
+.kyojin h1 {
+       animation: pulsate 1.5s infinite alternate;     
+  }
+  
+  @keyframes pulsate {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #007700,
+        0 0 80px #007700,
+        0 0 90px #007700,
+        0 0 100px #007700,
+        0 0 150px #007700;
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #007700,
+      0 0 45px #007700,
+      0 0 55px #007700,
+      0 0 70px #007700,
+      0 0 80px #007700;
+      }
+  }
+
+.hr-dots {
+    color: white;
+    border: 0;
+    height: 1px;
+    margin: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &::before {
+      content: '•••';
+      font-size: 1.25em;
+      letter-spacing: .75em;
+      opacity: .75;
+    }
+  
+  }
+
+.two{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.three{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.four{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.five{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.six{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.seven{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.eight{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.nine{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+.ten{
+  justify-content: space-around;
+  display: flex;
+  margin-right: 250px;
+  margin-left: 250px;
+  background-color:rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+
+.wow{
+  color: white;
+  text-decoration: none;
+}
+
+.wow:hover{
+  color: #888686;
+}
